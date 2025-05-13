@@ -1,8 +1,8 @@
-# Kobra - Analizador lexico sintáctico #
+# Kobra - Analizador léxico sintáctico #
 
 ### Descripción ###
 
-Analizador lexico y sintácico para el lenguaje Kobra un traductor de instrucciones en español, digitos y operadores a Python 
+Analizador léxico y sintácico para el lenguaje Kobra un traductor de instrucciones en español, digitos y operadores a Python 
 
 ### Información del curso: ###
   

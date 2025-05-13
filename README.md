@@ -1,16 +1,25 @@
-#Kobra - Lexico Sintáctico
+# Kobra - Analizador lexico sintáctico #
 
-###Descripción:
-  Analizador lexico y sintácico del lenguaje de programación Kobra para python 
+### Descripción ###
 
-###Información de curso:
-  Materia: Programación de Sistemas de Base I
-  Institución: Universidad Autónoma de Tamaulipas - Facultad de ingeniería
-  Semestre: Semestre 1 del 2025
-  Docente: Muñoz Quintero Dante Adolfo
+Analizador lexico y sintácico para el lenguaje Kobra un traductor de instrucciones en español, digitos y operadores a Python 
 
-###Integrantes:
-  Badillo Gonzalez Victor Manuel
-  Clemente Villegas Jose Adan
-  Cristobal Francisco Jesus Marcelino
-  Granados Gallegos Carlo Sebastian
+### Información del curso: ###
+  
+**Materia:** Programación de Sistemas de Base I
+  
+**Institución:** Universidad Autónoma de Tamaulipas - Facultad de ingeniería
+  
+**Semestre:** Primer semestre del 2025
+  
+**Docente:** Muñoz Quintero Dante Adolfo
+
+### Integrantes ###
+
+- Badillo Gonzalez Victor Manuel
+
+- Clemente Villegas Jose Adan
+
+- Cristobal Francisco Jesus Marcelino
+
+- Granados Gallegos Carlo Sebastian

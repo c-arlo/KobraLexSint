@@ -11,9 +11,9 @@ instruccion
 
 asignacion : ID ASIG expresion ;
 
-condicion : IF PARI expresion PARD LLAVI instruccion LLAVD ;
+condicion : 'SI' '(' expresion ')' '{' instruccion+ '}' ;
 
-ciclo : WHILE PARI expresion PARD LLAVI instruccion LLAVD ;
+ciclo : 'MIENTRAS' '(' expresion ')' '{' instruccion+ '}' ;
 
 expresion
     : expresion oper expresion
@@ -34,15 +34,7 @@ oper
 NUM : [0-9]+ ;
 ID : [a-zA-Z][a-zA-Z0-9]* ;
 
-IF : [SI] ;
-WHILE : [MIENTRAS] ;
-
 ASIG : [=] ;
-PARI : [(] ;
-PARD : [)] ;
-LLAVI : [{] ;
-LLAVD : [}] ;
-
 SUMA : [+] ;
 REST : [-] ;
 MULT : [*] ;

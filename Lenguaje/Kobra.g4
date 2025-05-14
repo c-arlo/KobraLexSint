@@ -9,7 +9,7 @@ instruccion
     | expresion
     ;
 
-asignacion : ID ASIG expresion | ID ;
+asignacion : ID ASIG expresion ;
 
 condicion : 'SI' '(' expresion ')' '{' instruccion+ '}' ;
 

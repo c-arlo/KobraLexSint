@@ -253,3 +253,78 @@ Output:
         '+'
         '32'
 line 1:3 extraneous input '+' expecting {'(', NUM, ID}
+
+Input:
+	> v@r#1 = H*la
+
+Output:
+
+--- TOKENS IDENTIFICADOS ---
+line 1:1 token recognition error at: '@'
+line 1:3 token recognition error at: '#'
+'v'
+'r'
+'1'
+'='
+'H'
+'*'
+'la'
+'<EOF>'
+
+--- ARBOL SINTACTICO ----
+(programa (instruccion (asignacion v)) (instruccion (asignacion r)) (instruccion (expresion 1)))
+<programa>
+  <instruccion>
+    <asignacion>
+      'v'
+  <instruccion>
+    <asignacion>
+      'r'
+  <instruccion>
+    <expresion>
+      '1'
+
+Input:
+	> MIENTRAS ( 3 < 2 ) 33 + 33
+
+Output:
+
+--- TOKENS IDENTIFICADOS ---
+'MIENTRAS'
+'('
+'3'
+'<'
+'2'
+')'
+'33'
+'+'
+'33'
+'<EOF>'
+
+--- ARBOL SINTACTICO ----
+(programa (instruccion (ciclo MIENTRAS ( (expresion (expresion 3) (oper <) (expresion 2)) ) <missing '{'> (instruccion (expresion (expresion 33) (oper +) (expresion 33))) <missing '}'>)))
+<programa>
+  <instruccion>
+    <ciclo>
+      'MIENTRAS'
+      '('
+      <expresion>
+        <expresion>
+          '3'
+        <oper>
+          '<'
+        <expresion>
+          '2'
+      ')'
+      '<missing '{'>'
+      <instruccion>
+        <expresion>
+          <expresion>
+            '33'
+          <oper>
+            '+'
+          <expresion>
+            '33'
+      '<missing '}'>'
+line 1:19 missing '{' at '33'
+line 1:26 extraneous input '<EOF>' expecting {'SI', '(', '}', 'MIENTRAS', NUM, ID}

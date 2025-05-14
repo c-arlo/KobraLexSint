@@ -1,0 +1,190 @@
+Input:
+	> SI ( var1 < 3 ) { var3 = var1 }
+
+Output:
+
+--- TOKENS IDENTIFICADOS ---
+'SI'
+'('
+'var1'
+'<'
+'3'
+')'
+'{'
+'var3'
+'='
+'var1'
+'}'
+'<EOF>'
+
+--- ARBOL SINTACTICO ----
+(programa (instruccion (condicion SI ( (expresion (expresion var1) (oper <) (expresion 3)) ) { (instruccion (asignacion var3 = (expresion var1))) })))
+
+<programa>
+  <instruccion>
+    <condicion>
+      'SI'
+      '('
+      <expresion>
+        <expresion>
+          'var1'
+        <oper>
+          '<'
+        <expresion>
+          '3'
+      ')'
+      '{'
+      <instruccion>
+        <asignacion>
+          'var3'
+          '='
+          <expresion>
+            'var1'
+      '}'
+
+Input:
+	> MIENTRAS ( 1 > 3 ) { 11 + 10 }
+
+Output:
+
+--- TOKENS IDENTIFICADOS ---
+'MIENTRAS'
+'('
+'1'
+'>'
+'3'
+')'
+'{'
+'11'
+'+'
+'10'
+'}'
+'<EOF>'
+
+--- ARBOL SINTACTICO ----
+(programa (instruccion (ciclo MIENTRAS ( (expresion (expresion 1) (oper >) (expresion 3)) ) { (instruccion (expresion (expresion 11) (oper +) (expresion 10))) })))
+<programa>
+  <instruccion>
+    <ciclo>
+      'MIENTRAS'
+      '('
+      <expresion>
+        <expresion>
+          '1'
+        <oper>
+          '>'
+        <expresion>
+          '3'
+      ')'
+      '{'
+      <instruccion>
+        <expresion>
+          <expresion>
+            '11'
+          <oper>
+            '+'
+          <expresion>
+            '10'
+      '}'
+
+Input:
+	> _variable1 = 678
+
+Output:
+
+line 1:0 token recognition error at: '_'
+'variable1'
+'='
+'678'
+'<EOF>'
+
+--- ARBOL SINTACTICO ----
+(programa (instruccion (asignacion variable1 = (expresion 678))))
+<programa>
+  <instruccion>
+    <asignacion>
+      'variable1'
+      '='
+      <expresion>
+        '678'
+
+Input:
+	> 3 * ( 3 + 10 )
+
+Output:
+
+--- TOKENS IDENTIFICADOS ---
+'3'
+'*'
+'('
+'3'
+'+'
+'10'
+')'
+'<EOF>'
+
+--- ARBOL SINTACTICO ----
+(programa (instruccion (expresion (expresion 3) (oper *) (expresion ( (expresion (expresion 3) (oper +) (expresion 10)) )))))
+<programa>
+  <instruccion>
+    <expresion>
+      <expresion>
+        '3'
+      <oper>
+        '*'
+      <expresion>
+        '('
+        <expresion>
+          <expresion>
+            '3'
+          <oper>
+            '+'
+          <expresion>
+            '10'
+        ')'
+
+Input:
+	> variable_33 = v_ari1
+
+Output:
+
+--- TOKENS IDENTIFICADOS ---
+'variable_33'
+'='
+'v_ari1'
+'<EOF>'
+
+--- ARBOL SINTACTICO ----
+(programa (instruccion (asignacion variable_33 = (expresion v_ari1))))
+<programa>
+  <instruccion>
+    <asignacion>
+      'variable_33'
+      '='
+      <expresion>
+        'v_ari1'
+
+Input:
+	> 6 < 3
+
+Output:
+
+--- TOKENS IDENTIFICADOS ---
+'6'
+'<'
+'3'
+'<EOF>'
+
+--- ARBOL SINTACTICO ----
+(programa (instruccion (expresion (expresion 6) (oper <) (expresion 3))))
+<programa>
+  <instruccion>
+    <expresion>
+      <expresion>
+        '6'
+      <oper>
+        '<'
+      <expresion>
+        '3'
+
+

@@ -187,4 +187,44 @@ Output:
       <expresion>
         '3'
 
+Input:
+	> SI 3 + 3 { var1 = 2 }
 
+Output:
+--- TOKENS IDENTIFICADOS ---
+'SI'
+'3'
+'+'
+'3'
+'{'
+'var1'
+'='
+'2'
+'}'
+'<EOF>'
+
+--- ARBOL SINTACTICO ----
+(programa (instruccion (condicion SI <missing '('> (expresion (expresion 3) (oper +) (expresion 3)) <missing ')'> { (instruccion (asignacion var1 = (expresion 2))) })))
+<programa>
+  <instruccion>
+    <condicion>
+      'SI'
+      '<missing '('>'
+      <expresion>
+        <expresion>
+          '3'
+        <oper>
+          '+'
+        <expresion>
+          '3'
+      '<missing ')'>'
+      '{'
+      <instruccion>
+        <asignacion>
+          'var1'
+          '='
+          <expresion>
+            '2'
+      '}'
+line 1:3 missing '(' at '3'
+line 1:9 missing ')' at '{'
